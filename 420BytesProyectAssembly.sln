@@ -7,7 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentacion", "Presentacio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Transversales", "Transversales", "{7CD62ADF-271B-44DC-A4C0-384A0E1332A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "420BytesProyectAssembly.PWA.Client", "420BytesProyectAssembly.PWA\Client\420BytesProyectAssembly.PWA.Client.csproj", "{17A99D72-D8E5-4B06-B1FF-00D817F21972}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "420BytesProyectAssembly.PWA.Client", "420BytesProyectAssembly.PWA\Client\420BytesProyectAssembly.PWA.Client.csproj", "{17A99D72-D8E5-4B06-B1FF-00D817F21972}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "420BytesWebAssembly.DT", "420BytesWebAssembly.DT\420BytesWebAssembly.DT.csproj", "{671EB3EB-EDAC-4F0A-AFD3-2511237B4B60}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,12 +21,17 @@ Global
 		{17A99D72-D8E5-4B06-B1FF-00D817F21972}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17A99D72-D8E5-4B06-B1FF-00D817F21972}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17A99D72-D8E5-4B06-B1FF-00D817F21972}.Release|Any CPU.Build.0 = Release|Any CPU
+		{671EB3EB-EDAC-4F0A-AFD3-2511237B4B60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{671EB3EB-EDAC-4F0A-AFD3-2511237B4B60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{671EB3EB-EDAC-4F0A-AFD3-2511237B4B60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{671EB3EB-EDAC-4F0A-AFD3-2511237B4B60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{17A99D72-D8E5-4B06-B1FF-00D817F21972} = {7CB1BFD1-E5E2-4F7B-89E5-EEEF59963CDB}
+		{671EB3EB-EDAC-4F0A-AFD3-2511237B4B60} = {7CD62ADF-271B-44DC-A4C0-384A0E1332A4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {273CFD9C-0772-4A96-A552-0671F5512EB7}

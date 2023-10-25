@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ADMIN\\source\\repos\\420BytesProyectAssembly\\420BytesProyectAssembly.PWA\\Client\\420BytesProyectAssembly.PWA.Client.csproj": {}
+    "C:\\Git\\420BytesWebAssembly\\420BytesProyectAssembly.PWA\\Client\\420BytesProyectAssembly.PWA.Client.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ADMIN\\source\\repos\\420BytesProyectAssembly\\420BytesProyectAssembly.PWA\\Client\\420BytesProyectAssembly.PWA.Client.csproj": {
+    "C:\\Git\\420BytesWebAssembly\\420BytesProyectAssembly.PWA\\Client\\420BytesProyectAssembly.PWA.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\source\\repos\\420BytesProyectAssembly\\420BytesProyectAssembly.PWA\\Client\\420BytesProyectAssembly.PWA.Client.csproj",
+        "projectUniqueName": "C:\\Git\\420BytesWebAssembly\\420BytesProyectAssembly.PWA\\Client\\420BytesProyectAssembly.PWA.Client.csproj",
         "projectName": "420BytesProyectAssembly.PWA.Client",
-        "projectPath": "C:\\Users\\ADMIN\\source\\repos\\420BytesProyectAssembly\\420BytesProyectAssembly.PWA\\Client\\420BytesProyectAssembly.PWA.Client.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\source\\repos\\420BytesProyectAssembly\\420BytesProyectAssembly.PWA\\Client\\obj\\",
+        "projectPath": "C:\\Git\\420BytesWebAssembly\\420BytesProyectAssembly.PWA\\Client\\420BytesProyectAssembly.PWA.Client.csproj",
+        "packagesPath": "C:\\Users\\Quick\\.nuget\\packages\\",
+        "outputPath": "C:\\Git\\420BytesWebAssembly\\420BytesProyectAssembly.PWA\\Client\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Quick\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,13 +22,16 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Git\\420BytesWebAssembly\\420BytesWebAssembly.DT\\420BytesWebAssembly.DT.csproj": {
+                "projectPath": "C:\\Git\\420BytesWebAssembly\\420BytesWebAssembly.DT\\420BytesWebAssembly.DT.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -53,6 +52,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.23, )"
+            },
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             }
           },
           "imports": [
@@ -77,12 +84,67 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
         "browser-wasm": {
           "#import": []
+        }
+      }
+    },
+    "C:\\Git\\420BytesWebAssembly\\420BytesWebAssembly.DT\\420BytesWebAssembly.DT.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Git\\420BytesWebAssembly\\420BytesWebAssembly.DT\\420BytesWebAssembly.DT.csproj",
+        "projectName": "420BytesWebAssembly.DT",
+        "projectPath": "C:\\Git\\420BytesWebAssembly\\420BytesWebAssembly.DT\\420BytesWebAssembly.DT.csproj",
+        "packagesPath": "C:\\Users\\Quick\\.nuget\\packages\\",
+        "outputPath": "C:\\Git\\420BytesWebAssembly\\420BytesWebAssembly.DT\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Quick\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

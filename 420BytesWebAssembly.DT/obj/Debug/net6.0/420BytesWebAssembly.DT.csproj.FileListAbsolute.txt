@@ -1,0 +1,11 @@
+C:\Git\420BytesWebAssembly\420BytesWebAssembly.DT\bin\Debug\net6.0\420BytesWebAssembly.DT.deps.json
+C:\Git\420BytesWebAssembly\420BytesWebAssembly.DT\bin\Debug\net6.0\420BytesWebAssembly.DT.dll
+C:\Git\420BytesWebAssembly\420BytesWebAssembly.DT\bin\Debug\net6.0\420BytesWebAssembly.DT.pdb
+C:\Git\420BytesWebAssembly\420BytesWebAssembly.DT\obj\Debug\net6.0\420BytesWebAssembly.DT.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git\420BytesWebAssembly\420BytesWebAssembly.DT\obj\Debug\net6.0\420BytesWebAssembly.DT.AssemblyInfoInputs.cache
+C:\Git\420BytesWebAssembly\420BytesWebAssembly.DT\obj\Debug\net6.0\420BytesWebAssembly.DT.AssemblyInfo.cs
+C:\Git\420BytesWebAssembly\420BytesWebAssembly.DT\obj\Debug\net6.0\420BytesWebAssembly.DT.csproj.CoreCompileInputs.cache
+C:\Git\420BytesWebAssembly\420BytesWebAssembly.DT\obj\Debug\net6.0\420BytesWebAssembly.DT.dll
+C:\Git\420BytesWebAssembly\420BytesWebAssembly.DT\obj\Debug\net6.0\refint\420BytesWebAssembly.DT.dll
+C:\Git\420BytesWebAssembly\420BytesWebAssembly.DT\obj\Debug\net6.0\420BytesWebAssembly.DT.pdb
+C:\Git\420BytesWebAssembly\420BytesWebAssembly.DT\obj\Debug\net6.0\ref\420BytesWebAssembly.DT.dll

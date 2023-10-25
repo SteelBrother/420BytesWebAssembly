@@ -1,18 +1,135 @@
 ﻿@page "/counter"
+@inject IIndiceUsuarios_ViewModel IIndiceUsuarios_ViewModel
+@using System.Globalization
+@using _420BytesProyectAssembly.PWA.Client.ViewModels.Interfaces;
+@using _420BytesWebAssembly.DT.Usuario;
+@inject IJSRuntime js
 
-<PageTitle>Counter</PageTitle>
+<div class="row">
+    <div class="col-sm-12">
+        <div>
+            <h1>Listar usuarios</h1>
 
-<h1>Counter</h1>
+            @if (IIndiceUsuarios_ViewModel.Usuarios != null && IIndiceUsuarios_ViewModel.Usuarios.Count() > 0)
+            {
+                <EditForm Model="IIndiceUsuarios_ViewModel.Usuarios">
 
-<p role="status">Current count: @currentCount</p>
+                    <table class="default">
 
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+                        <tr>
+                            <td>Cedula</td>
+                            <td>Nombre</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        @foreach (var item in IIndiceUsuarios_ViewModel.Usuarios)
+                        {
+                            <tr>
+                                <td><input @bind-value="@item.Cedula"> </td>
+                                <td><input @bind-value="@item.Nombre"> </td>
+                                <td><button @onclick="() => ActualizarUsuario2(item)">Actualizar</button> </td>
+                                <td><button @onclick="() => BorrarUsuario(item.Cedula)">Borrar</button> </td>
+
+                            </tr>
+                        }
+                    </table>
+
+                </EditForm>
+
+            }
+
+        </div>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div>
+            <div>
+                <EditForm Model="UsuarioLlenar" OnValidSubmit="RegistrarUsuario">
+
+                    <p>Registrar usuario</p>
+                    <input type="text" @bind="@CedulaIngresadaF" />
+                    <input type="text" @bind="@NombreIngresadoF" />
+
+                    <input value="Guardar" Type="submit">
+
+                </EditForm>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<h1>Contador</h1>
+
+<p>Valor actual del contador: @contador</p>
+
+<button class="btn btn-primary" @onclick="IncrementarContador">Incrementar</button>
+
+<button class="btn btn-danger" @onclick="ResetearContador">Resetear</button>
 
 @code {
-    private int currentCount = 0;
+    private string CedulaIngresada { get; set; }
+    private int CedulaIngresadaF { get; set; }
+    private string NombreIngresadoF { get; set; }
 
-    private void IncrementCount()
+    Usuario UsuarioLlenar = new Usuario();
+
+    protected async override Task OnInitializedAsync()
     {
-        currentCount++;
+        await IIndiceUsuarios_ViewModel.ObtenerListaUsuariosAsync();
+        StateHasChanged();
+    }
+
+    public async Task RegistrarUsuario()
+    {
+        UsuarioLlenar.Cedula = CedulaIngresadaF;
+        UsuarioLlenar.Nombre = NombreIngresadoF;
+
+        await IIndiceUsuarios_ViewModel.RegitrarUsuario(UsuarioLlenar);
+        IncrementarContador();
+        StateHasChanged();
+
+    }
+    public async Task ActualizarUsuario2(Usuario Usuario)
+    {
+        await IIndiceUsuarios_ViewModel.ActualizarUsuario(Usuario);
+        StateHasChanged();
+
+    }
+    public async Task ActualizarUsuario()
+    {
+        UsuarioLlenar.Cedula = CedulaIngresadaF;
+        UsuarioLlenar.Nombre = NombreIngresadoF;
+
+        StateHasChanged();
+    }
+
+    public async Task BorrarUsuario(int Cedula)
+    {
+
+        await IIndiceUsuarios_ViewModel.BorrarUsuario(Cedula);
+        ResetearContador();
+        StateHasChanged();
+
+    }
+
+
+    private int contador = 0;
+
+    private void IncrementarContador()
+    {
+        contador++;
+        StateHasChanged(); // Forzar la actualización de la interfaz de usuario
+    }
+
+    private void ResetearContador()
+    {
+        contador = 0;
+        StateHasChanged(); // Forzar la actualización de la interfaz de usuario
     }
 }
