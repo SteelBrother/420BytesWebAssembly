@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\420BytesProyectAssembly.PWA.Client.props" />
+</Project>
